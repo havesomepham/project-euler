@@ -1,5 +1,8 @@
+var time = "";
+console.time("time"); // start timer
+
 // returns the nth triangle number
-function triangle(n) { 
+function triangle(n) {
     let sum = n * (n + 1) / 2;
     return sum;
 }
@@ -46,7 +49,7 @@ function divisors(n) {
         } else if (factors[i] != prime) { // if the prime factor is unique
             if (exponents[q] == 0) { // if this is the first prime factor ever
                 prime = factors[i]; // update to the next unique prime factor (which is the one at factors[i])
-                exponents[0] += 1; 
+                exponents[0] += 1;
             } else {
                 prime = factors[i]; // update to the next unique prime factor (which is the one at factors[i])
                 q += 1; // update the index of exponents by 1
@@ -72,3 +75,5 @@ while (divisors(triangle(nthCand)) < 500) {
 }
 
 console.log(triangle(nthCand)); // 76576500
+
+console.timeEnd("time"); // end timer
