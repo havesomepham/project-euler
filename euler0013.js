@@ -1,5 +1,8 @@
 // note: trivial in JS, absolutely no cleverness required!
 
+var time = "";
+console.time("time"); // start timer
+
 const data = [37107287533902102798797998220837590246510135740250,
     46376937677490009712648124896970078050417018260538,
     74324986199524741059474233309513058123726617309629,
@@ -122,3 +125,5 @@ function trim(n) {
 
 var ans = trim(sum(data));
 console.log(ans); // 5537376230
+
+console.timeEnd("time"); // end timer
