@@ -49,11 +49,11 @@ function divisors(n) {
         } else if (factors[i] != prime) { // if the prime factor is unique
             if (exponents[q] == 0) { // if this is the first prime factor ever
                 prime = factors[i]; // update to the next unique prime factor (which is the one at factors[i])
-                exponents[0] += 1;
+                exponents[0] += 1; // and add 1 to the existing value in exponents
             } else {
                 prime = factors[i]; // update to the next unique prime factor (which is the one at factors[i])
                 q += 1; // update the index of exponents by 1
-                exponents[q] = 1;
+                exponents[q] = 1; // and add 1 to the existing value in exponents
             }
 
         }
