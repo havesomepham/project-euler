@@ -112,10 +112,10 @@ function sum(data) {
 function trim(n) {
     let string = n.toString();
     let digits = '';
-    for (let i = 0; i < 11; i++){
+    for (let i = 0; i < 11; i++) {
         if (string.charAt(i) != '.') { // ignore decimal point
             digits += string.charAt(i);
-        } 
+        }
     }
     return digits;
 }
