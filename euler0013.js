@@ -1,3 +1,5 @@
+// note: trivial in JS, absolutely no cleverness required!
+
 const data = [37107287533902102798797998220837590246510135740250,
     46376937677490009712648124896970078050417018260538,
     74324986199524741059474233309513058123726617309629,
@@ -100,5 +102,23 @@ const data = [37107287533902102798797998220837590246510135740250,
     53503534226472524250874054075591789781264330331690]
 
 function sum(data) {
-
+    let total = 0;
+    for (let i of data) {
+        total += i
+    }
+    return total;
 }
+
+function trim(n) {
+    let string = n.toString();
+    let digits = '';
+    for (let i = 0; i < 11; i++){
+        if (string.charAt(i) != '.') { // ignore decimal point
+            digits += string.charAt(i);
+        } 
+    }
+    return digits;
+}
+
+var ans = trim(sum(data));
+console.log(ans); // 5537376230
