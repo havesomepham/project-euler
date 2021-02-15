@@ -7,7 +7,6 @@ var bestNum;
 var tempLength = 0; // used by collatz() in order to have a counter that survives after each recursion
 
 function getCollatzLength(n) {
-    //let num = n;
     if (n == 1) { // end case n = 1: add 1 to length count and return it 
         tempLength++;
         return tempLength;
