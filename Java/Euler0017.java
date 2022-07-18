@@ -2,9 +2,11 @@
 
 public class Euler0017 {
 
-    public static String[] bases = {"","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
+    public static String[] bases = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+            "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
 
-    public static String[] tens = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+    public static String[] tens = { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty",
+            "ninety" };
 
     public static String hundred = "hundred";
     public static String thousand = "thousand";
@@ -21,15 +23,17 @@ public class Euler0017 {
             if (n % 100 == 0) { // {100, 200, ..., 900}
                 return bases[n / 100].length() + hundred.length();
             } else if (n % 100 < 20) { // {101, 102, ... 119, 201, ... 919}
-                return bases[(n - (n % 100)) / 100].length() + and.length() + hundred.length() + bases[n % 100].length();
+                return bases[(n - (n % 100)) / 100].length() + and.length() + hundred.length()
+                        + bases[n % 100].length();
             } else {
-                return bases[(n - (n % 100)) / 100].length() + and.length() + hundred.length() + tens[((n - (n % 10)) / 10) % 10].length() + bases[n % 10].length();
+                return bases[(n - (n % 100)) / 100].length() + and.length() + hundred.length()
+                        + tens[((n - (n % 10)) / 10) % 10].length() + bases[n % 10].length();
             }
         }
     }
 
     public static void main(String[] args) {
-        
+
         int totalLetters = 0;
 
         for (int i = 1; i <= 1000; i++) {
