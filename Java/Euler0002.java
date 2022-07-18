@@ -12,7 +12,7 @@ public class Euler0002 {
         int space;
         int sum = 0;
 
-        while(a < 4000000) {
+        while (a < 4000000) {
             if (a % 2 == 0) {
                 sum += a;
             }

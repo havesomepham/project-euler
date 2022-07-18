@@ -6,7 +6,7 @@
  */
 
 public class Euler0005 {
-    
+
     public static boolean isTotallyDivisible(int n) {
         for (int i = 1; i <= 20; i++) {
             if (n % i != 0) {

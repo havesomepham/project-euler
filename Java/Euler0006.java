@@ -9,6 +9,6 @@ public class Euler0006 {
         }
 
         squareOfSum = Math.pow(squareOfSum, 2);
-        System.out.println((int)(squareOfSum - sumOfSquares));
+        System.out.println((int) (squareOfSum - sumOfSquares));
     }
 }

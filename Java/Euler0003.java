@@ -13,13 +13,13 @@ public class Euler0003 {
         double greatestFactor = 1d;
         double NUM = 600851475143d;
 
-    while (currentFactor <= NUM) {
-        if (NUM % currentFactor == 0) {
-            greatestFactor = currentFactor;
-            NUM /= greatestFactor;
+        while (currentFactor <= NUM) {
+            if (NUM % currentFactor == 0) {
+                greatestFactor = currentFactor;
+                NUM /= greatestFactor;
+            }
+            currentFactor += 2;
         }
-        currentFactor += 2;
-    }
-    System.out.println((int)greatestFactor);
+        System.out.println((int) greatestFactor);
     }
 }

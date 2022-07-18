@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 
 public class Euler0016 {
     public static void main(String[] args) {
-        BigDecimal NUM = new BigDecimal(Math.pow(2,1000)); // use BigDecimal to preserve digit precision
+        BigDecimal NUM = new BigDecimal(Math.pow(2, 1000)); // use BigDecimal to preserve digit precision
         BigDecimal digitSum = new BigDecimal(0); // use BigDecimal here as well since most operations in the BigDecimal class are incompatible with other types
 
         while (NUM.compareTo(BigDecimal.ONE) != -1) { // while NUM is not less than 1
